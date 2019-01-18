@@ -23,7 +23,7 @@ When answering the questions, remember to use all the resources at your disposal
  (Come back to this after you have worked on part 4 of this exercise)
  > "This of course requires a lot more work from the application developers in order to harness the full power of multi-tasking: a program running on a single task just doesn't get any benefit from a multi-core CPU (although the system gets an overall bonus because it doesn't lock if a single process takes a single CPU to 100% usage)"
  
- Kan være problematisk ved endring av variabler. F.eks. dersom to parallelle oppgaver blir løst samtidig, og bruker felles variabler.
+> Kan være problematisk ved endring av variabler. F.eks. dersom to parallelle oppgaver blir løst samtidig, og bruker felles variabler.
  
  ### What are the differences between processes, threads, green threads, and coroutines?
  > "A process is the smallest unit of a running application, an application can consist of one or more processes. A thread is the basic unit to which the operating system allocates processor time. A thread can execute any part of the process code." 
