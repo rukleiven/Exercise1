@@ -9,7 +9,7 @@ When answering the questions, remember to use all the resources at your disposal
  > *Your answer here*
  
  ### Why have machines become increasingly multicore in the past decade?
- > *Your answer here*
+ > *Your answer he
  
  ### What kinds of problems motivates the need for concurrent execution?
  (Or phrased differently: What problems do concurrency help in solving?)
