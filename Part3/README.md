@@ -30,16 +30,15 @@ When answering the questions, remember to use all the resources at your disposal
 
 > "Green threads are threads that are scheduled by a runtime library or virtual machine, instead of the underlying operative system, which regular threads are. Green threads are “user-level threads” which means they are scheduled by an ordinary user-level process, not by the kernel. So they can be used to simulate multi-threading on platforms that don’t provide that capability."
 
-> "Coroutine: line of execution where theres only one corioutine running at any given time. A corioutine has its own stack, its own variables, and its own instruction pointer. It shares global variables, and most anything else with other coroutines." 
+> "Coroutine: line of execution where theres only one corioutine running at any given time. A corioutine has its own stack, its own variables, and its own instruction pointer. It shares global variables, and most anything else with other coroutines."
+
+> Prosseser innehar programkode og data og har en til flere tråder. Tråder har ikke data, men utfører programkoden til prosessen som eier den. Grønne tråder er tråder som blir "planlagt" (scheduled) av et bibliotek eller virtuell maskin. Grønne tråder avhenger ikke av OS'ets evene til å håndtere programmer/prosesser.
+
+> Coroutines er subrutioner (metoder, funksjoner, osv.) som gir fra seg kontroll over prosessor under veis i kjøringen.
 
  
  ### Which one of these do `pthread_create()` (C/POSIX), `threading.Thread()` (Python), `go` (Go) create?
 > pthread_create() oppretter en tråd. Threading.Thread() oppretter en OS kontrollert tråd, men noe spesielt pga GIL (global interpreter lock). Go oppretter coroutines som ligner på green threads, men det er en forskjell.
-
-1.	Creates a new thread
-2.	Returns selected thread object. If the thread is not created yet, a dummy thread object with limited functionality is returned.
-3.	Starts a new goroutine running, a goroutine is a lightweight thread managed by the go runtime.
-
  
  ### How does pythons Global Interpreter Lock (GIL) influence the way a python Thread behaves?
  > "The GIL is a lock that allows only one thread to hold the control of the Python interpreter. This means that only one thread can be in a state of execution in any point of time. The GIL is often used in single-threaded programs, but can be used as a bottleneck in multi-threaded code." 
@@ -48,4 +47,4 @@ When answering the questions, remember to use all the resources at your disposal
  > *Your answer here*
  
  ### What does `func GOMAXPROCS(n int) int` change? 
- > "The gomaprox variable limits the number of operating system threads that can execute user-level Go code simultaneously." 
+ > The gomaprox variable limits the number of operating system threads that can execute user-level Go code simultaneously. 
