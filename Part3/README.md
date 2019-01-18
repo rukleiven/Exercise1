@@ -28,9 +28,9 @@ When answering the questions, remember to use all the resources at your disposal
  ### What are the differences between processes, threads, green threads, and coroutines?
  > A process is the smallest unit of a running application, an application can consist of one or more processes. A thread is the basic unit to which the operating system allocates processor time. A thread can execute any part of the process code. 
 
-Green threads are threads that are scheduled by a runtime library or virtual machine, instead of the underlying operative system, which regular threads are. Green threads are “user-level threads” which means they are scheduled by an ordinary user-level process, not by the kernel. So they can be used to simulate multi-threading on platforms that don’t provide that capability.
+> Green threads are threads that are scheduled by a runtime library or virtual machine, instead of the underlying operative system, which regular threads are. Green threads are “user-level threads” which means they are scheduled by an ordinary user-level process, not by the kernel. So they can be used to simulate multi-threading on platforms that don’t provide that capability.
 
-Coroutine: line of execution where theres only one corioutine running at any given time. A corioutine has its own stack, its own variables, and its own instruction pointer. It shares global variables, and most anything else with other coroutines. 
+> Coroutine: line of execution where theres only one corioutine running at any given time. A corioutine has its own stack, its own variables, and its own instruction pointer. It shares global variables, and most anything else with other coroutines. 
 
  
  ### Which one of these do `pthread_create()` (C/POSIX), `threading.Thread()` (Python), `go` (Go) create?
