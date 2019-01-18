@@ -35,6 +35,11 @@ When answering the questions, remember to use all the resources at your disposal
  
  ### Which one of these do `pthread_create()` (C/POSIX), `threading.Thread()` (Python), `go` (Go) create?
 > pthread_create() oppretter en tråd. Threading.Thread() oppretter en OS kontrollert tråd, men noe spesielt pga GIL (global interpreter lock). Go oppretter coroutines som ligner på green threads, men det er en forskjell.
+
+1.	Creates a new thread
+2.	Returns selected thread object. If the thread is not created yet, a dummy thread object with limited functionality is returned.
+3.	Starts a new goroutine running, a goroutine is a lightweight thread managed by the go runtime.
+
  
  ### How does pythons Global Interpreter Lock (GIL) influence the way a python Thread behaves?
  > "The GIL is a lock that allows only one thread to hold the control of the Python interpreter. This means that only one thread can be in a state of execution in any point of time. The GIL is often used in single-threaded programs, but can be used as a bottleneck in multi-threaded code." 
