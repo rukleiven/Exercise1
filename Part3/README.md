@@ -39,7 +39,7 @@ When answering the questions, remember to use all the resources at your disposal
 > 3.	"Starts a new goroutine running, a goroutine is a lightweight thread managed by the go runtime."
  
  ### How does pythons Global Interpreter Lock (GIL) influence the way a python Thread behaves?
- > The GIL is a lock that allows only one thread to hold the control of the Python interpreter. This means that only one thread can be in a state of execution in any point of time. The GIL is often used in single-threaded programs, but can be used as a bottleneck in multi-threaded code. 
+ > "The GIL is a lock that allows only one thread to hold the control of the Python interpreter. This means that only one thread can be in a state of execution in any point of time. The GIL is often used in single-threaded programs, but can be used as a bottleneck in multi-threaded code." 
  
  ### With this in mind: What is the workaround for the GIL (Hint: it's another module)?
  > *Your answer here*
