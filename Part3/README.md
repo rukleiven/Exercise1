@@ -44,7 +44,8 @@ When answering the questions, remember to use all the resources at your disposal
  > "The GIL is a lock that allows only one thread to hold the control of the Python interpreter. This means that only one thread can be in a state of execution in any point of time. The GIL is often used in single-threaded programs, but can be used as a bottleneck in multi-threaded code." 
  
  ### With this in mind: What is the workaround for the GIL (Hint: it's another module)?
- > *Your answer here*
+ > En må kjøre flere python interpreters gjennom å benytte multiprocess modulen. For så å dele et minneområde mellom prosessene.
  
  ### What does `func GOMAXPROCS(n int) int` change? 
- > The gomaprox variable limits the number of operating system threads that can execute user-level Go code simultaneously. 
+ > The gomaprox variable limits the number of operating system threads that can execute user-level Go code simultaneously.
+ > Setter maksgrense for hvor mange tråder som go corutinene kan fordeles over.
