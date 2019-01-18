@@ -6,14 +6,16 @@ To complete this exercise you will have to use git. Create one or several commit
 When answering the questions, remember to use all the resources at your disposal. Asking the internet isn't a form of "cheating", it's a way of learning.
 
  ### What is concurrency? What is parallelism? What's the difference?
-> "Concurrency is when two or more tasks can start, run, and complete in overlapping time periods. It doesn't necessarily mean they'll ever both be running at the same instant. For example, multitasking on a single-core machine.Parallelism is when tasks literally run at the same time, e.g., on a multicore processor."
+> Concurrency: Multiple tasks start, run and complete independent of eachother in overlapping time periods. They do not necessarily execute at the same instant, i.e multitasking on a single-core processor. Parallelism means that multiple tasks run at the exact same time, which requires multiple processor cores.   
 
-> // Kommentar: Skiller mellom mulighet og faktsik utførelse.
+> // Kommentar: Skiller mellom mulighet og faktisk utførelse.
  
  ### Why have machines become increasingly multicore in the past decade?
  > "The trend towards multiple cores is an engineering approach that helps the CPU designers avoid the power consumption problem that came with ever increasing frequency scaling. The computing power and clock frequency of a single processor reached their peak a few years ago, it just isn't easy to create more powerful and/or faster processors than the current ones; so the major CPU manufacturers (Intel, AMD) switched strategy and went multi-core...*"
+ 
+>Due to limitations in hardware. The number of transistor per areal does not scale by Moore's anymore. A solution to this problem is multiple-core systems. 
 
-> // Kommentar: Altså klarer vi ikke gjøre kjernene raskere enn de er uten å møte på større ulemper. Løsningen ble å heller å ha flere kjerner.
+> // Kommentar: Altså klarer vi ikke gjøre kjernene raskere enn de er uten å møte på større ulemper, varme. Løsningen ble å heller å ha flere kjerner.
  
  ### What kinds of problems motivates the need for concurrent execution?
  (Or phrased differently: What problems do concurrency help in solving?)
@@ -21,18 +23,14 @@ When answering the questions, remember to use all the resources at your disposal
  
  ### Does creating concurrent programs make the programmer's life easier? Harder? Maybe both?
  (Come back to this after you have worked on part 4 of this exercise)
- > "This of course requires a lot more work from the application developers in order to harness the full power of multi-tasking: a program running on a single task just doesn't get any benefit from a multi-core CPU (although the system gets an overall bonus because it doesn't lock if a single process takes a single CPU to 100% usage)"
  
-> Kan være problematisk ved endring av variabler. F.eks. dersom to parallelle oppgaver blir løst samtidig, og bruker felles variabler.
+> The programmer must be aware of shared variables, such that if two threads are modifying the same variable, it need to be synchronized. 
+ 
+
  
  ### What are the differences between processes, threads, green threads, and coroutines?
- > "A process is the smallest unit of a running application, an application can consist of one or more processes. A thread is the basic unit to which the operating system allocates processor time. A thread can execute any part of the process code." 
 
-> "Green threads are threads that are scheduled by a runtime library or virtual machine, instead of the underlying operative system, which regular threads are. Green threads are “user-level threads” which means they are scheduled by an ordinary user-level process, not by the kernel. So they can be used to simulate multi-threading on platforms that don’t provide that capability."
-
-> "Coroutine: line of execution where theres only one corioutine running at any given time. A corioutine has its own stack, its own variables, and its own instruction pointer. It shares global variables, and most anything else with other coroutines."
-
-> Prosseser innehar programkode og data og har en til flere tråder. Tråder har ikke data, men utfører programkoden til prosessen som eier den. Grønne tråder er tråder som blir "planlagt" (scheduled) av et bibliotek eller virtuell maskin. Grønne tråder avhenger ikke av OS'ets evene til å håndtere programmer/prosesser.
+> A process is the instance of a running application that contains program code and data. Threads do not contain data, but execute the program code of the process. A process can be made up of several threads. Green threads are threads that are scheduled of a library or a virtual machine instead of the OS.  
 
 > Coroutines er subrutioner (metoder, funksjoner, osv.) som gir fra seg kontroll over prosessor under veis i kjøringen.
 
