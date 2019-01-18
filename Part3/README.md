@@ -23,8 +23,15 @@ When answering the questions, remember to use all the resources at your disposal
  (Come back to this after you have worked on part 4 of this exercise)
  > "This of course requires a lot more work from the application developers in order to harness the full power of multi-tasking: a program running on a single task just doesn't get any benefit from a multi-core CPU (although the system gets an overall bonus because it doesn't lock if a single process takes a single CPU to 100% usage)"
  
+ Kan være problematisk ved endring av variabler. F.eks. dersom to parallelle oppgaver blir løst samtidig, og bruker felles variabler.
+ 
  ### What are the differences between processes, threads, green threads, and coroutines?
- > Prosseser innehar programkode og data og har en til flere tråder. Tråder har ikke data, men utfører programkoden til prosessen som eier den. Grønne tråder er tråder som blir "planlagt" (scheduled) av et bibliotek eller virtuell maskin. Grønne tråder avhenger ikke av OS'ets evene til å håndtere programmer/prosesser. Coroutines er subrutioner (metoder, funksjoner, osv.) som gir fra seg kontroll over prosessor under veis i kjøringen.
+ > A process is the smallest unit of a running application, an application can consist of one or more processes. A thread is the basic unit to which the operating system allocates processor time. A thread can execute any part of the process code. 
+
+Green threads are threads that are scheduled by a runtime library or virtual machine, instead of the underlying operative system, which regular threads are. Green threads are “user-level threads” which means they are scheduled by an ordinary user-level process, not by the kernel. So they can be used to simulate multi-threading on platforms that don’t provide that capability.
+
+Coroutine: line of execution where theres only one corioutine running at any given time. A corioutine has its own stack, its own variables, and its own instruction pointer. It shares global variables, and most anything else with other coroutines. 
+
  
  ### Which one of these do `pthread_create()` (C/POSIX), `threading.Thread()` (Python), `go` (Go) create?
  > *Your answer here*
