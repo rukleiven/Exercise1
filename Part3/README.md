@@ -13,7 +13,7 @@ When answering the questions, remember to use all the resources at your disposal
  
  ### What kinds of problems motivates the need for concurrent execution?
  (Or phrased differently: What problems do concurrency help in solving?)
- > *Your answer here*
+ > *Your answer her
  
  ### Does creating concurrent programs make the programmer's life easier? Harder? Maybe both?
  (Come back to this after you have worked on part 4 of this exercise)
