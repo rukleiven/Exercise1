@@ -43,4 +43,4 @@ When answering the questions, remember to use all the resources at your disposal
  > *Your answer here*
  
  ### What does `func GOMAXPROCS(n int) int` change? 
- > The gomaprox variable limits the number of operating system threads that can execute user-level Go code simultaneously. 
+ > "The gomaprox variable limits the number of operating system threads that can execute user-level Go code simultaneously." 
