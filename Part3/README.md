@@ -17,7 +17,7 @@ When answering the questions, remember to use all the resources at your disposal
  
  ### What kinds of problems motivates the need for concurrent execution?
  (Or phrased differently: What problems do concurrency help in solving?)
- > *Your answer here*
+ > Many real-time software systems must be reactive, and must respond to externally generated events, which can occur at any time, often also random times. The ability to respond to such events, although still being able to continue ones previous tasks, is an example of concurrency. In our project with the elevator, requests are sent at random time stamps, which our software system solves with concurrent problem solving. 
  
  ### Does creating concurrent programs make the programmer's life easier? Harder? Maybe both?
  (Come back to this after you have worked on part 4 of this exercise)
