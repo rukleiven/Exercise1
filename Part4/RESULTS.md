@@ -1,1 +1,1 @@
-
+One of the threads seem to fetch the variable i before the other thread has had the opportunity to update it's decrement/increment of i. This happens both for c, go and python. By joining the threads, the error seems to be much smaller than if the threads are unjoined. 
